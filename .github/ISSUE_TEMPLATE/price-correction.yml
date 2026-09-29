@@ -1,0 +1,54 @@
+name: Price correction
+description: Report a price, configuration or availability mismatch.
+title: "[Price correction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Include the official Apple or Samsung store information so the report can be checked against the same configuration. Reports and replies are public; do not include account details, payment information or receipts.
+  - type: input
+    id: model
+    attributes:
+      label: Product model
+      description: Include the brand and exact model name.
+      placeholder: Apple iPhone 18 Pro
+    validations:
+      required: true
+  - type: input
+    id: configuration
+    attributes:
+      label: Storage and configuration
+      description: Include storage, colour, screen size, connectivity or regional product code where relevant.
+      placeholder: 256 GB
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country or region
+      description: The country or region of the official store.
+      placeholder: India
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official store URL
+      description: Link to the relevant Apple or Samsung country store listing.
+    validations:
+      required: true
+  - type: input
+    id: checked-date
+    attributes:
+      label: Date checked
+      description: Use YYYY-MM-DD. Add the time and time zone if relevant.
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should change?
+      description: Include the price and currency shown by the official store, what our site shows, and any tax, availability or promotion conditions. Add the affected comparison page URL if possible.
+    validations:
+      required: true
